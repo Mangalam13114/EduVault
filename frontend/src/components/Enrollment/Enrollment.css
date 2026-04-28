@@ -1,0 +1,195 @@
+/* ═══════════════════════════════════════════════════════
+   Enrollment Styles - Updated & Responsive
+   ═══════════════════════════════════════════════════════ */
+
+.enrollment-container {
+  min-height: 100vh;
+  padding: 40px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.enrollment-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.enrollment-header h1 {
+  font-size: 30px;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.enrollment-header p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.teacher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teacher-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.teacher-card:hover {
+  border-color: var(--border-hover);
+}
+
+.teacher-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.teacher-avatar-lg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f1219;
+  flex-shrink: 0;
+}
+
+.teacher-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.teacher-info p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.course-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.course-chip {
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-glass);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-chip:hover {
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.course-chip.selected {
+  border-color: var(--accent-1);
+  background: rgba(79, 172, 254, 0.08);
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.06);
+}
+
+.course-chip-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.course-chip.selected .course-chip-check {
+  background: var(--accent-1);
+  border-color: var(--accent-1);
+  color: #0f1219;
+}
+
+.course-chip-info {
+  flex: 1;
+}
+
+.course-chip-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.course-chip-code {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.enrollment-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.enrollment-count {
+  text-align: center;
+  margin-top: 18px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.enrollment-count span {
+  color: var(--accent-1);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .enrollment-container {
+    padding: 24px 16px;
+  }
+
+  .enrollment-header h1 {
+    font-size: 24px;
+  }
+
+  .teacher-card {
+    padding: 18px;
+  }
+
+  .course-chips {
+    gap: 8px;
+  }
+
+  .course-chip {
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-chips {
+    flex-direction: column;
+  }
+}
